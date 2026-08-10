@@ -16,14 +16,12 @@ public class QuickSort {
     }
 
     private static int partition(int[] arr, int low, int high) {
-        final int pivot = arr[high];
+        final int pivot = arr[low + (high - low) / 2];
 
-        int i = low;
-        for (int j = low; j < high; j++)
-            if (arr[j] <= pivot && j != i++)
-                swap(arr, j, i - 1);
-
-        swap(arr, i, high);
+        int i = low - 1;
+        for (int j = low; j <= high; j++)
+            if (arr[j] <= pivot && j != ++i)
+                swap(arr, j, i);
 
         return i;
     }
