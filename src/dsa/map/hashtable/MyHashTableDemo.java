@@ -1,7 +1,6 @@
-package map.hashtable;
+package dsa.map.hashtable;
 
 import java.util.Hashtable;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Random;
 

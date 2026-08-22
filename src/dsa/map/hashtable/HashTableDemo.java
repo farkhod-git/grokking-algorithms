@@ -1,4 +1,4 @@
-package map.hashtable;
+package dsa.map.hashtable;
 
 import java.util.Hashtable;
 

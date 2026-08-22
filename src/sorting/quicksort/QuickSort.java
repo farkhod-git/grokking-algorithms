@@ -18,12 +18,12 @@ public class QuickSort {
     private static int partition(int[] arr, int low, int high) {
         final int pivot = arr[low + (high - low) / 2];
 
-        int i = low - 1;
+        int swapMarker = low - 1;
         for (int j = low; j <= high; j++)
-            if (arr[j] <= pivot && j != ++i)
-                swap(arr, j, i);
+            if (arr[j] <= pivot && j != ++swapMarker)
+                swap(arr, j, swapMarker);
 
-        return i;
+        return swapMarker;
     }
 
     private static void swap(int[] arr, int i, int j) {
